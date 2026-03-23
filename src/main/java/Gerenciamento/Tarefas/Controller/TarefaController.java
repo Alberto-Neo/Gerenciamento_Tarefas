@@ -31,7 +31,7 @@ public class TarefaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deletar(long id){
+    public ResponseEntity<?> deletar(@PathVariable long id){
         tarefaService.deletar(id);
         return ResponseEntity.noContent().build();
     }
